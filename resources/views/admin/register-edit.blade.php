@@ -14,20 +14,20 @@
             </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col">
                     <form action="/role-register-update/{{$users->id}}" method="post">
                         {{ csrf_field() }}
                         {{ method_field('PUT')  }}
-                        <div class="form-group">
+
                             <label>Name</label>
-                            <input type="text" name="username" value = "name" class="from-control">
+                            <input type="text" name="username" value = "{{ $users->name}}" class="from-control">
                         </div>
 
                              <div class="form-group">
                                <label>Give Role</label>
                                <select name="user_type" class="from-control">
                                <option value="admin">Admin</option>
-                               <option value="user">Vendor</option>
+                               <option value="user">vendor</option>
                               </select>
                            </div>
                              <button type="submit" class="btn btn-success">Update</button>
@@ -40,8 +40,6 @@
       </div>
   </div>
 </div>
-
-
 
 @endsection
 

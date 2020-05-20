@@ -31,9 +31,11 @@ Route::post('contracts', 'ContractController@store')->name('contracts.store');
 Route::get('listcontract', 'ContractController@index')->name('contracts.listcontract');
 Route::get('/downloadContractPDF/{id}','ContractController@downloadPDF');
 
+Route::get('/edit-profil/{id}','Admin\DashboardController@profiledit');
+Route::get('/role-register','Admin\DashboardController@registered');
+Route::get('/role-edit/{id}','Admin\DashboardController@registeredit');
+Route::get('/role-show/{id}','Admin\DashboardController@registershow');
+Route::put('/role-register-update/{id}','Admin\DashboardController@registerupdate');
 
-Route::get('/allusers','AdminController@allusers')->name('admin.allusers');;
-Route::get('/role-edit/{id}','AdminController@getAdminEdit');
-Route::put('/role-register-update/{id}','AdminController@postAdminUpdate');
+Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 
-Route::delete('/role-delete/{id}','AdminController@registerdelete');

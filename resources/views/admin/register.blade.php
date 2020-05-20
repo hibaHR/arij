@@ -23,22 +23,25 @@
         <div class="card-body">
           <div class="table-responsive">
             <table class="table">
-              <thead class=" text-primary">
-              <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Usertype</th>
-                <th>Edit</th>
-                <th>Delete</th>
+              <thead class=" table table-striped">
+              <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Usertype</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Show</th>
+                <th scope="col">Delete</th>
               </thead>
               <tbody>
                   @foreach ($users as $row)
-                <tr>
+                <tr scope="row">
                 <td>{{ $row->id }}</td>
                   <td>{{ $row->name }}</td>
                   <td>{{ $row->email }}</td>
                   <td>{{ $row->user_type }}</td>
                   <td><a href="/role-edit/{{  $row->id }}" class="btn btn-success">Edit</a> </td>
+                  <td><a href="/role-show/{{  $row->id }}" class="btn btn-info">Show</a> </td>
+
                   <td> <form action="/role-delete/{{  $row->id }}" method="post">
                     {{ csrf_field() }}
                     {{  method_field('DELETE')  }}
@@ -50,6 +53,7 @@
                 @endforeach
               </tbody>
             </table>
+            {!! $users ->links() !!}
           </div>
         </div>
       </div>

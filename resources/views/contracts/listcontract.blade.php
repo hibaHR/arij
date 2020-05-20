@@ -14,7 +14,7 @@
     <th>reponse9</th>
     <th>Action</th>
   </thead>
-
+  <tbody>
     @foreach($contracts  as $contract)
     <tr>
       <td>{{$contract->id}}</td>
@@ -28,9 +28,9 @@
       <td>{{$contract->reponse9}}</td>
 
 
-      <td><a href="{{action('ContractController@downloadPDF', $contract->id)}}">Download PDF</a></td>
+      <td><a href="{{ action('ContractController@downloadPDF', $contract->id) }}">Download PDF</a></td>
     </tr>
     @endforeach
-  
+</tbody>
 </table>
 @endsection
