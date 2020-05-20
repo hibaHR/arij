@@ -1,0 +1,145 @@
+/*===================================================================================
+                				===[ Appoinmet Page Style ]===
+=====================================================================================*/
+.appoinment_section{
+	background: #F5F5F5;
+	padding-top: 100px;
+}
+.appoinment_header {
+	margin-bottom: 50px;
+	text-align: center;
+}
+.appoinment_header h2{
+	color: #ffffff;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 50px;
+}
+.appoinment_header h2::before {
+	border-left: 70px solid #ffffff;
+	border-right: 70px solid #ffffff;
+	bottom: -25px;
+	content: "";
+	height: 1px;
+	left: 50%;
+	margin-left: -83px;
+	position: absolute;
+	width: 175px;
+}
+.appoinment_header h2::after {
+	bottom: -35px;
+	content: "\ecef";
+	left: 50%;
+	margin-left: -6px;
+	padding: 2px 2px 2px 2px;
+	position: absolute;
+	font-family: icofont;
+	color: red;
+	font-size: 18px;
+}
+.appoinment_header p{
+	color: #ffffff;
+	font-size: 15px;
+	width: 55%;
+	margin: 0px auto;
+	line-height: 25px;
+}
+.appoinment_bg{
+	background: #14B5F8;
+	padding: 50px 20px;
+}
+.appoinment-from .form-controls {
+	border: 1px solid #ffffff;
+	width: 100%;
+	margin-bottom: 30px;
+	height: 50px;
+	padding: 0px 10px;
+	outline: none;
+	box-shadow: none;
+	color: #555;
+	border-radius: 0px;
+	background: rgba(255, 255, 255, 1);
+}
+.appoinment-from form .appoinment_group{
+	position: relative;
+}
+.appoinment-from .form-controls:focus{
+	border: 2px solid #14B5F8;
+}
+.appoinment-from input::placeholder,
+.appoinment-from textarea::placeholder{
+	color: #14B5F8;
+	font-size: 17px;
+	text-transform: capitalize;
+}
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 2000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: 4px;
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	width: 42%;
+}
+.appoinment-from .appoinment_group select {
+	color: #515358;
+	padding-left: 10px;
+	font-size: 17px;
+	width: 100%;
+	height: 50px;
+	color: #555;
+	text-transform: capitalize;
+	outline: none;
+	background: transparent;
+	border: 1px solid #DADADA;
+	border-radius: 0px;
+	background: #fff;
+	-moz-appearance: none;
+	appearance: none !important;
+	cursor: pointer;
+}
+.appoinment-from .appoinment_group .select_box{
+	position: relative;
+}
+.appoinment-from .appoinment_group .select_box::after {
+	content: "\eb5a";
+	font-family: "icofont";
+	font-size: 20px;
+	color: #aaa;
+	right: 10px;
+	bottom: 20%;
+	position: absolute;
+	pointer-events: none;
+	cursor: pointer;
+}
+.appoinment-from .appoinment_group select:focus{
+	border: 1px solid #14B5F8;
+}
+.appoinment-from button {
+	width: 49%;
+	height: 50px;
+	background: rgba(20, 181, 248, 1);
+	border: 1px solid #14B5F8;
+	border: none;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.appoinment-from button:hover{
+	color: #14B5F8;
+	background: #ffffff;
+	border: 1px solid #14B5F8;
+	transition: .5s;
+}
