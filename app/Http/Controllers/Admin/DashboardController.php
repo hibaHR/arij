@@ -47,5 +47,11 @@ class DashboardController extends Controller
      return redirect('/role-register')->with('status','Your Data is deleted');
 
     }
+
+
+
+
+
+
 }
 

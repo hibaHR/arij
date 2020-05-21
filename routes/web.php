@@ -31,7 +31,8 @@ Route::post('contracts', 'ContractController@store')->name('contracts.store');
 Route::get('listcontract', 'ContractController@index')->name('contracts.listcontract');
 Route::get('/downloadContractPDF/{id}','ContractController@downloadPDF');
 
-Route::get('/edit-profil/{id}','Admin\DashboardController@profiledit');
+Route::get('/edit-profil/{id}','ProfileController@getEditprofil');
+Route::get('/update-profil/{id}','ProfileController@getupdateprofil');
 Route::get('/role-register','Admin\DashboardController@registered');
 Route::get('/role-edit/{id}','Admin\DashboardController@registeredit');
 Route::get('/role-show/{id}','Admin\DashboardController@registershow');

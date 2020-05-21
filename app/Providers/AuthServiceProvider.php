@@ -32,7 +32,7 @@ class AuthServiceProvider extends ServiceProvider
 
 
 
-        $gate->define('isAuthor',function($user)
+        $gate->define('isUser',function($user)
         {
             return $user->user_type =='user';
         });
