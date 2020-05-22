@@ -13,25 +13,31 @@
                 <h3> Edit Role for Registered users</h3>
             </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col">
+
+
                     <form action="/role-register-update/{{$users->id}}" method="post">
                         {{ csrf_field() }}
                         {{ method_field('PUT')  }}
-
-                            <label>Name</label>
-                            <input type="text" name="username" value = "{{ $users->name}}" class="from-control">
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                            <input type="text" name="username" value = "{{ $users->name}}" class="form-control form-control-sm">
+                        </div>
                         </div>
 
-                             <div class="form-group">
-                               <label>Give Role</label>
-                               <select name="user_type" class="from-control">
+                        <div class="form-group row">
+                               <label class="col-sm-2 col-form-label">Give Role</label>
+                               <div class="col-sm-10">
+                               <select name="user_type"  class="form-control form-control-sm">
                                <option value="admin">Admin</option>
-                               <option value="user">vendor</option>
+                               <option value="user">User</option>
                               </select>
                            </div>
+                           </div>
+                           <br>
+                           <center>
                              <button type="submit" class="btn btn-success">Update</button>
-                             <button type="submit" class="btn btn-danger">Cancel</button>
+                             <button type="submit" class="btn btn-danger">Cancel</button></center>
                     </form>
 </div>
 </div>

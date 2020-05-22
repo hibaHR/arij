@@ -31,8 +31,8 @@ Route::post('contracts', 'ContractController@store')->name('contracts.store');
 Route::get('listcontract', 'ContractController@index')->name('contracts.listcontract');
 Route::get('/downloadContractPDF/{id}','ContractController@downloadPDF');
 
-Route::get('/edit-profil/{id}','ProfileController@getEditprofil');
-Route::get('/update-profil/{id}','ProfileController@getupdateprofil');
+
+
 Route::get('/role-register','Admin\DashboardController@registered');
 Route::get('/role-edit/{id}','Admin\DashboardController@registeredit');
 Route::get('/role-show/{id}','Admin\DashboardController@registershow');
@@ -40,3 +40,6 @@ Route::put('/role-register-update/{id}','Admin\DashboardController@registerupdat
 
 Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 
+
+Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'ProfileController@edit']);
+Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'ProfileController@update']);

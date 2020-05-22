@@ -4,29 +4,38 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\User;
+use  App\User;
 
 class ProfileController extends Controller
 {
-    public function getEditprofil($id)
-    {
 
-        $user= User::find($id);
-        return view('admin.edit', ['user' => $user]);
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    public function getupdateprofil( Request $request)
+    public function edit(User $user)
     {
-        $this->validate($request, [
-            'name' => 'required|string',
-            'email' => 'required|email|unique:users,email,'.Auth::id()
+        $user = Auth::user();
+        return view('users.edit', compact('user'));
+    }
+
+    public function update(User $user)
+    {
+        $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6|confirmed'
         ]);
-        $user = User::find(Auth::id());
-        $user->name= $request->input('name');
-        $user->email= $request->input('email');
+
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->password = bcrypt(request('password'));
 
         $user->save();
-        Flash::message('Your account has been updated!');
+
+        return back();
+    }
 
 }
-}
+
