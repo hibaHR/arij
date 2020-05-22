@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Edit-Registered| Gestion d'article
+   <center> Edit-Registered| Gestion d'article</CENTER>
 @endsection
 @section('content')
 <div class="container">
@@ -36,8 +36,8 @@
                            </div>
                            <br>
                            <center>
-                             <button type="submit" class="btn btn-success">Update</button>
-                             <button type="submit" class="btn btn-danger">Cancel</button></center>
+                             <button type="submit" class="badge badge-pill badge-success">Update</button>
+                             <button type="submit" class="badge badge-pill badge-danger">Cancel</button></center>
                     </form>
 </div>
 </div>

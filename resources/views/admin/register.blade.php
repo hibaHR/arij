@@ -39,13 +39,13 @@
                   <td>{{ $row->name }}</td>
                   <td>{{ $row->email }}</td>
                   <td>{{ $row->user_type }}</td>
-                  <td><a href="/role-edit/{{  $row->id }}" class="btn btn-success">Edit</a> </td>
-                  <td><a href="/role-show/{{  $row->id }}" class="btn btn-info">Show</a> </td>
+                  <td><a href="/role-edit/{{  $row->id }}" class="badge badge-success">Edit</a> </td>
+                  <td><a href="/role-show/{{  $row->id }}" class="badge badge-info">Show</a></td>
 
                   <td> <form action="/role-delete/{{  $row->id }}" method="post">
                     {{ csrf_field() }}
                     {{  method_field('DELETE')  }}
-                  <button type="submit" class="btn btn-danger">Delete</button>
+                  <button type="submit" class="badge badge-danger">Delete</button>
                    </form>
                    </td>
 
@@ -53,7 +53,7 @@
                 @endforeach
               </tbody>
             </table>
-            {!! $users ->links() !!}
+          {!! $users ->links() !!}
           </div>
         </div>
       </div>
