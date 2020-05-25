@@ -41,5 +41,13 @@ Route::put('/role-register-update/{id}','Admin\DashboardController@registerupdat
 Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 
 
-Route::get('users/{user}',  ['as' => 'users.edit', 'uses' => 'ProfileController@edit']);
+Route::get('/edit','ProfileController@edit');
 Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'ProfileController@update']);
+
+
+
+
+Route::get('freelanceContract','FreelanceContractController@create')->name('freelancecontract.create');
+Route::post('freelanceContract','FreelanceContractController@store')->name('freelancecontract.store');
+Route::get('freelanceContract/list', 'FreelanceContractController@index')->name('freelancecontract.index');
+Route::get('freelanceContract/downloadPDF/{id}','FreelanceContractController@downloadPDF');

@@ -288,13 +288,13 @@
           --}}
           @can('isUser')
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+              <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Contracts
                 <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
+                  </p>
+                  </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('contracts.create') }}" class="nav-link">
@@ -302,27 +302,33 @@
                   <p> VEHICLE RENTAL CONTRACT </p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
+           </ul>
+                 <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                   <a href="{{route ('contracts.listcontract')}}" class="nav-link">
+                   <i class="far fa-circle nav-icon"></i>
+                    <p>List Contract Downloaded</p>
+                   </a>
+                   </li>
+                 </ul>
+                 <ul class="nav nav-treeview">
+                 <li class="nav-item">
+                <a href="/freelanceContract" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Contract CDD</p>
+                  <p>CONTRACT Freelancer</p>
                 </a>
               </li>
+              </ul>
+              <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
+                <a href="/freelanceContract/list" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>CONTRACT CDI</p>
+                  <p>List contract Freelancer</p>
                 </a>
               </li>
+              </ul>
+            </li>
 
-              <li class="nav-item">
-                <a href="{{route ('contracts.listcontract')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List Contract Downloaded</p>
-                </a>
-              </li>
-            </ul>
-          </li>
 
           @endcan
 
@@ -339,7 +345,7 @@
 
 
               <li class="nav-item">
-                <a href="users" class="nav-link">
+                <a href="/edit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Personal informations</p>
                 </a>
@@ -370,69 +376,20 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="/freelanceContract/list" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>List Contracts Downloaded.</p>
+                  <p>List contract Freelancer</p>
                 </a>
               </li>
+
              </ul>
 
         </li>
-              <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Contracts
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{ route('contracts.create') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p> VEHICLE RENTAL CONTRACT </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Contract CDD</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>CONTRACT CDI</p>
-                </a>
-              </li>
+
+
 
               @endcan
-              <li class="nav-item">
-                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>3</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>4</p>
-                </a>
-              </li>
-            </ul>
-          </li>
+
           {{--
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -478,7 +435,7 @@
             </a>
           </li>
 
-        </ul>
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>

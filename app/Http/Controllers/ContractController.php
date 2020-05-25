@@ -39,7 +39,7 @@ class ContractController extends Controller
 
             $contracts->save();
 
-        return view('contracts.listcontract')->with('success', 'Contract saved');
+        return view('home')->with('success', 'Contract saved');
     }
 
     public function downloadPDF($id) {
