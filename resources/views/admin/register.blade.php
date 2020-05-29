@@ -12,8 +12,9 @@
 <div class="row">
     <div class="col-md-12">
       <div class="card">
-        <div class="card-header">
-          <h4 class="card-title"> Registred Roles</h4>
+        <div class="header">
+      <center <h4  class="form-text text-muted"> Registred Roles</h4></center>
+
           @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}

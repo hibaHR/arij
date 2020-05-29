@@ -10,8 +10,8 @@
 <div class="row">
     <div class="col-md-12">
       <div class="card">
-        <div class="card-header">
-        <center><h4 class="card-title"> Edit Profil</h4></center>
+        <div class="header">
+        <h4 class="form-text text-muted"> Edit Profil</h4>
           @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -29,13 +29,13 @@
     </div>
     <div class="form-group row">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1"  name="email"  value="{{ $user->email }}" aria-describedby="emailHelp" placeholder="Enter email">
+    <input type="email" class="form-control form-control-sm"  name="email"  value="{{ $user->email }}" aria-describedby="emailHelp" placeholder="Enter email">
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
 
   <div class="form-group row">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password"  name="password"  class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <input type="password"  name="password"  value= "$user->password" class="form-control" id="exampleInputPassword1" placeholder="Password">
     <small id="passwordHelpInline" class="text-muted">
       Must be 6-20 characters long.
     </small>
@@ -53,8 +53,7 @@
                  </div>
            </div>
       </div>
-  </div>
-</div>
+
 
 @endsection
 

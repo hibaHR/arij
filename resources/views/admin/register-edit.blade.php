@@ -1,17 +1,10 @@
 @extends('layouts.admin')
-
-
-@section('title')
-   <center> Edit-Registered| Gestion d'article</CENTER>
-@endsection
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-12">
      <div class="card">
-         <div class="card-header">
-                <h3> Edit Role for Registered users</h3>
-            </div>
+
                 <div class="card-body">
 
 

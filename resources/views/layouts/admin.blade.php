@@ -46,12 +46,8 @@
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
+
+
       </div>
     </form>
 
@@ -68,9 +64,10 @@
         </a>
 
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
+            <a  href="{{ route('logout') }}"
                onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
+                               <i class="fas fa-sign-out-alt"></i>
                 {{ __('Logout') }}
             </a>
 
@@ -298,31 +295,31 @@
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('contracts.create') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p> VEHICLE RENTAL CONTRACT </p>
+                  <i class="fas fa-plus-square"></i>
+                  <p> Vehicle Rental Contract </p>
                 </a>
               </li>
            </ul>
                  <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                   <a href="{{route ('contracts.listcontract')}}" class="nav-link">
-                   <i class="far fa-circle nav-icon"></i>
-                    <p>List Contract Downloaded</p>
-                   </a>
-                   </li>
-                 </ul>
-                 <ul class="nav nav-treeview">
                  <li class="nav-item">
                 <a href="/freelanceContract" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>CONTRACT Freelancer</p>
+                <i class="fas fa-plus-square"></i>
+                  <p>Contract Freelancer</p>
                 </a>
               </li>
               </ul>
               <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                   <a href="{{route ('contracts.listcontract')}}" class="nav-link">
+                   <i class="fas fa-cloud-download-alt"></i>
+                    <p>List Vehicle Rental</p>
+                   </a>
+                   </li>
+                 </ul>
+              <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="/freelanceContract/list" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                   <i class="fas fa-cloud-download-alt"></i>
                   <p>List contract Freelancer</p>
                 </a>
               </li>
@@ -346,13 +343,13 @@
 
               <li class="nav-item">
                 <a href="/edit" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-address-book"></i>
                   <p>Personal informations</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/role-register" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-users"></i>
                   <p>List Users</p>
                 </a>
               </li>
@@ -365,19 +362,19 @@
               <p>
                 Documents
                 <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
+                <span class="badge badge-info right"></span>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{route ('contracts.listcontract')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>List Contract Downloaded</p>
+                  <i class="fas fa-cloud-download-alt"></i>
+                  <p>List contract Vehicle Rental </p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="/freelanceContract/list" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-cloud-download-alt"></i>
                   <p>List contract Freelancer</p>
                 </a>
               </li>
@@ -423,17 +420,24 @@
          --}}
 
 
-          <li class="nav-item">
+<br>
+<br>
+<br>
+
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-              <i class="nav-icon far fa-circle text-danger"></i>
-              <p><a class="dropdown-item" href="{{ route('logout') }}"
+
+             <p> <a  aria-hidden="true" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
+                <i class="fas fa-sign-out-alt"></i>
                  {{ __('Logout') }}
+
              </a> </p>
 
             </a>
           </li>
+
 
 
       </nav>
