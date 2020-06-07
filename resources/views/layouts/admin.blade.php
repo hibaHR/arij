@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Laravel Template PDF| Dashboard</title>
+  <title>Laravel Template PDF</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -308,6 +308,13 @@
                 </a>
               </li>
               </ul>
+              <a href="#" class="nav-link">
+              <i class=""></i>
+              <p>
+                Document
+                <i class="fas fa-angle-left right"></i>
+                  </p>
+                  </a>
               <ul class="nav nav-treeview">
                   <li class="nav-item">
                    <a href="{{route ('contracts.listcontract')}}" class="nav-link">

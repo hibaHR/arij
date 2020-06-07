@@ -25,12 +25,12 @@ class ProfileController extends Controller
         $this->validate(request(), [
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6|confirmed'
+
         ]);
 
         $user->name = request('name');
         $user->email = request('email');
-        $user->password = bcrypt(request('password'));
+
 
         $user->save();
 

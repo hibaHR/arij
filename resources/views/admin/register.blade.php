@@ -22,6 +22,17 @@
                     @endif
         </div>
         <div class="card-body">
+
+
+
+
+        <a href="{{ url('/register')}}" class="badge badge-primary" style="float: right" data-toggle="modal" data-target="#exampleModal" >Add</a>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+
+</div><BR>
+        <BR>
           <div class="table-responsive">
             <table class="table">
               <thead class=" table table-striped">
@@ -30,7 +41,7 @@
                 <th scope="col">Email</th>
                 <th scope="col">Usertype</th>
                 <th scope="col">Edit</th>
-                <th scope="col">Show</th>
+
                 <th scope="col">Delete</th>
               </thead>
               <tbody>
@@ -41,7 +52,6 @@
                   <td>{{ $row->email }}</td>
                   <td>{{ $row->user_type }}</td>
                   <td><a href="/role-edit/{{  $row->id }}" class="badge badge-success">Edit</a> </td>
-                  <td><a href="/role-show/{{  $row->id }}" class="badge badge-info">Show</a></td>
 
                   <td> <form action="/role-delete/{{  $row->id }}" method="post">
                     {{ csrf_field() }}

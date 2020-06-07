@@ -8,6 +8,34 @@ use App\User;
 
 class DashboardController extends Controller
 {
+
+
+    public function create()
+    {
+        return view('admin.register');
+    }
+
+
+    public function store (Request $request)
+    {
+
+            $users = new User ;
+            $users->name = $request->input('name');
+            $users->email = $request->input('email');
+            $users->save();
+
+        return redirect('/role-register')->with('success', 'user saved');
+    }
+
+
+
+
+
+
+
+
+
+
     public function registered()
     {
      $users = User::orderBy('created_at', 'desc')->paginate(2);
@@ -17,11 +45,6 @@ class DashboardController extends Controller
 
 
 
-    public function registershow( $id)
-    {
-        $users = User::find($id);
-        return view('admin.register-show')->with('users',$users);
-    }
 
 
     public function registeredit(Request $request ,$id)

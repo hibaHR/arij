@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\freelanceContract;
 use PDF;
+use Auth;
 
 class freelanceContractController extends Controller
 
@@ -14,29 +15,32 @@ class freelanceContractController extends Controller
         return view('form_freelanceContract');
     }
     public function store(Request $request){
-        $validateDate = $request->validate([
-            'em_name' => 'required|max:255',
-            'ep_name' => 'required|max:255',
-            'from' => 'required',
-            'to' => 'required',
-            'wage' => 'required',
-            'pb_periode' => 'required',
-            'place' => 'required',
-            'em_id' => 'required|max:8',
-            'job_duty' => 'required',
-            'sig_date_em' => 'required',
-            'sig_date_ep' => 'required',
-            'fixed_period' => '',
-            'fixed_period_of' => '',
-            'break_partie' => ''
-        ]);
-        freelanceContract::create($validateDate);
+
+        $freelanceContracts = new freelanceContract();
+        $freelanceContracts->em_name = $request->input('em_name');
+        $freelanceContracts->ep_name = $request->input('ep_name');
+        $freelanceContracts->from = $request->input('from');
+        $freelanceContracts->to = $request->input('to');
+        $freelanceContracts->wage = $request->input('wage');
+        $freelanceContracts->pb_periode = $request->input('pb_periode');
+        $freelanceContracts->place = $request->input('place');
+        $freelanceContracts->em_id = $request->input('em_id');
+        $freelanceContracts->job_duty = $request->input('job_duty');
+        $freelanceContracts->sig_date_em = $request->input('sig_date_em');
+        $freelanceContracts->sig_date_ep = $request->input('sig_date_ep');
+        $freelanceContracts->fixed_period = $request->input('fixed_period');
+        $freelanceContracts->fixed_period_of = $request->input('fixed_period_of');
+        $freelanceContracts->break_partie = $request->input('break_partie');
+        $freelanceContracts->user_id = Auth::user()->id;
+
+
+        $freelanceContracts->save();;
         return redirect('/freelanceContract')->with('success', 'created');
     }
     public function index()
 {
-        $contracts = freelanceContract::all();
-        return view('liste_freelanceContract', compact('contracts'));
+        $freelanceContracts = freelanceContract::where('user_id', Auth::user()->id)->get();
+        return view('liste_freelanceContract', compact('freelanceContracts'));
 }
 public function downloadPDF($id) {
     $contract = freelanceContract::find($id);

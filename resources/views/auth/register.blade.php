@@ -4,9 +4,9 @@
     }
     </style>
 <html>
-   
+
     <head>
-      
+
         <link href="css/style-auth.css" rel="stylesheet">
         <link href="css/owl.theme.default.css" rel="stylesheet">
         <meta charset="utf-8">
@@ -14,18 +14,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-    
-        <title>SB Admin 2 - Bootstrap Admin Theme</title>
-    
+
+        <title>Register</title>
+
         <!-- Bootstrap Core CSS -->
         <link href="{{ asset('dist/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    
+
         <!-- MetisMenu CSS -->
         <link href="{{ asset('dist/vendor/metisMenu/metisMenu.min.css') }}" rel="stylesheet">
-    
+
         <!-- Custom CSS -->
         <link href="{{ asset('dist/css/sb-admin-2.css') }}" rel="stylesheet">
-    
+
         <!-- Custom Fonts -->
         <link href="{{ asset('dist/vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     </head>
@@ -103,7 +103,7 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 <!-- jQuery -->
 <script src="{{ asset('dist/vendor/jquery/jquery.min.js') }}"></script>
 

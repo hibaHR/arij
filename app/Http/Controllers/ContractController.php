@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Contract;
 use PDF;
+use Auth;
 use Illuminate\Http\Request;
 
 class ContractController extends Controller
 {
+    public function  __construct() {
+
+        $this->middleware('auth');
+  }
     //
     public function index()
     {
-            $contracts = Contract::all();
+            $contracts = Auth::user()->contracts;
 
             return \view('contracts.listcontract', ['contracts' => $contracts]);
     }
@@ -36,6 +41,7 @@ class ContractController extends Controller
             $contracts->reponse7 = $request->input('reponse7');
             $contracts->reponse8 = $request->input('reponse8');
             $contracts->reponse9 = $request->input('reponse9');
+            $contracts->user_id = Auth::user()->id;
 
             $contracts->save();
 

@@ -12,16 +12,16 @@
     <th>Action</th>
   </thead>
   <tbody>
-    @foreach($contracts  as $contract)
+    @foreach($freelanceContracts  as $freelanceContract)
     <tr>
-      <td>{{$contract->id}}</td>
-      <td>{{$contract->created_at}}</td>
-      <td>{{$contract->em_name}}</td>
-      <td>{{$contract->ep_name}}</td>
-      <td>{{$contract->from}}</td>
-      <td>{{$contract->to}}</td>
-      <td>{{$contract->place}}</td>
-      <td><a href="{{ action('FreelanceContractController@downloadPDF', $contract->id) }}">Download PDF</a></td>
+      <td>{{$freelanceContract->id}}</td>
+      <td>{{$freelanceContract->created_at}}</td>
+      <td>{{$freelanceContract->em_name}}</td>
+      <td>{{$freelanceContract->ep_name}}</td>
+      <td>{{$freelanceContract->from}}</td>
+      <td>{{$freelanceContract->to}}</td>
+      <td>{{$freelanceContract->place}}</td>
+      <td><a href="{{ action('FreelanceContractController@downloadPDF', $freelanceContract->id) }}">Download PDF</a></td>
     </tr>
     @endforeach
 </tbody>

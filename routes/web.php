@@ -34,6 +34,9 @@ Route::get('/downloadContractPDF/{id}','ContractController@downloadPDF');
 
 
 Route::get('/role-register','Admin\DashboardController@registered');
+
+
+
 Route::get('/role-edit/{id}','Admin\DashboardController@registeredit');
 Route::get('/role-show/{id}','Admin\DashboardController@registershow');
 Route::put('/role-register-update/{id}','Admin\DashboardController@registerupdate');
@@ -42,7 +45,7 @@ Route::delete('/role-delete/{id}','Admin\DashboardController@registerdelete');
 
 
 Route::get('/edit','ProfileController@edit');
-Route::patch('users/{user}/update',  ['as' => 'users.update', 'uses' => 'ProfileController@update']);
+Route::patch('users/{user}',  ['as' => 'users.update', 'uses' => 'ProfileController@update']);
 
 
 
